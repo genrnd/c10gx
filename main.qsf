@@ -299,10 +299,10 @@ set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_hb_p[0] -entity main
 set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_hb_p[1] -entity main
 set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_la_p[0] -entity main
 set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_la_p[1] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfp1_rd_p -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfp1_td_n -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfp2_rd_p -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfp2_td_n -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to sfp1_rd_p -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to sfp1_td_n -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to sfp2_rd_p -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to sfp2_td_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk0_m2c_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk0_m2c_p -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk_in_n -entity main
@@ -397,3 +397,5 @@ set_instance_assignment -name IO_STANDARD LVDS -to refclkr_gxd_p -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to refclkr_sfp1_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to refclkr_sfp2_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to refclkr_sfp2_p -entity main
+set_global_assignment -name IP_FILE diff_in.ip
+set_global_assignment -name IP_FILE diff_out.ip

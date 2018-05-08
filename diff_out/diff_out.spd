@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_gpio_core20_180/sim/altera_gpio.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_gpio_core20_180" />
+ <file
+   path="altera_gpio_180/sim/diff_out_altera_gpio_180_ux4bazq.v"
+   type="VERILOG"
+   library="altera_gpio_180"
+   hasInlineConfiguration="true" />
+ <file
+   path="sim/diff_out.v"
+   type="VERILOG"
+   library="diff_out"
+   hasInlineConfiguration="true" />
+ <topLevel name="diff_out.diff_out" />
+ <deviceFamily name="cyclone10gx" />
+</simPackage>

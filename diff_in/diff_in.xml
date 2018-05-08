@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.05.08.06:39:03"
+ outputDirectory="/home/const/dev/c10gx/diff_in/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone 10 GX"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10CX105YF672E6G"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="dout" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="dout" direction="output" role="export" width="1" />
+  </interface>
+  <interface name="pad_in" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="pad_in" direction="input" role="export" width="1" />
+  </interface>
+  <interface name="pad_in_b" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="pad_in_b" direction="input" role="export" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="diff_in" version="1.0" name="diff_in">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="10CX105YF672E6G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 GX" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/home/const/dev/c10gx/diff_in/synth/diff_in.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/const/dev/c10gx/diff_in/synth/diff_in.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/home/const/dev/c10gx/diff_in.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/const/intelFPGA_pro/18.0/ip/altera/altera_gpio/altera_gpio_top/altera_gpio_hw.tcl" />
+   <file
+       path="/home/const/intelFPGA_pro/18.0/ip/altera/altera_gpio/altera_gpio_core20/altera_gpio_core_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="diff_in">"Generating: diff_in"</message>
+   <message level="Info" culprit="diff_in">"Generating: diff_in_altera_gpio_180_bency7y"</message>
+   <message level="Info" culprit="diff_in">"Generating: altera_gpio"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_gpio"
+   version="18.0"
+   name="diff_in_altera_gpio_180_bency7y">
+  <parameter name="BUS_HOLD" value="false" />
+  <parameter name="EXT_DRIVER_PARAM" value="false" />
+  <parameter name="ENABLE_TERM" value="false" />
+  <parameter name="PIN_TYPE" value="input" />
+  <parameter name="gui_use_oe_off_shadow" value="false" />
+  <parameter name="gui_io_reg_mode" value="none" />
+  <parameter name="OPEN_DRAIN" value="false" />
+  <parameter name="device_family" value="Cyclone 10 GX" />
+  <parameter name="PIN_TYPE_GUI" value="Input" />
+  <parameter name="gui_diff_buff" value="true" />
+  <parameter name="gui_bus_hold_shadow" value="false" />
+  <parameter name="gui_separate_io_clks" value="false" />
+  <parameter name="gui_separate_io_clks_off_shadow" value="false" />
+  <parameter name="gui_enable_termination_ports_shadow" value="false" />
+  <parameter name="gui_pseudo_diff_on_shadow" value="true" />
+  <parameter name="SEPARATE_I_O_CLOCKS" value="false" />
+  <parameter name="gui_pseudo_diff_off_shadow" value="false" />
+  <parameter name="gui_enable_termination_ports" value="false" />
+  <parameter name="gui_areset_mode_off_shadow" value="None" />
+  <parameter name="gui_enable_cke_off_shadow" value="false" />
+  <parameter name="REGISTER_MODE" value="none" />
+  <parameter name="gui_use_oe" value="false" />
+  <parameter name="gui_sreset_mode" value="None" />
+  <parameter name="gui_enable_migratable_port_names" value="false" />
+  <parameter name="gui_sreset_mode_off_shadow" value="None" />
+  <parameter name="ENABLE_OE" value="false" />
+  <parameter name="GENERATE_SDC_FILE" value="false" />
+  <parameter name="gui_pseudo_diff" value="true" />
+  <parameter name="SRESET_MODE" value="none" />
+  <parameter name="IP_MIGRATE_PORT_MAP_FILE" value="altddio_bidir_port_map.csv" />
+  <parameter name="SIZE" value="1" />
+  <parameter name="BUFFER_TYPE" value="differential" />
+  <parameter name="PSEUDO_DIFF" value="false" />
+  <parameter name="gui_use_oe_on_shadow" value="true" />
+  <parameter name="gui_open_drain_shadow" value="false" />
+  <parameter name="gui_hr_logic" value="false" />
+  <parameter name="SYS_INFO_DEVICE" value="10CX105YF672E6G" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="gui_enable_cke" value="false" />
+  <parameter name="ENABLE_CKE" value="false" />
+  <parameter name="HALF_RATE" value="false" />
+  <parameter name="gui_areset_mode" value="None" />
+  <parameter name="gui_bus_hold" value="false" />
+  <parameter name="ARESET_MODE" value="none" />
+  <parameter name="gui_open_drain" value="false" />
+  <generatedFiles>
+   <file
+       path="/home/const/dev/c10gx/diff_in/altera_gpio_180/synth/diff_in_altera_gpio_180_bency7y.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/const/dev/c10gx/diff_in/altera_gpio_180/synth/diff_in_altera_gpio_180_bency7y.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/const/intelFPGA_pro/18.0/ip/altera/altera_gpio/altera_gpio_top/altera_gpio_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/const/intelFPGA_pro/18.0/ip/altera/altera_gpio/altera_gpio_core20/altera_gpio_core_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="diff_in" as="gpio_0" />
+  <messages>
+   <message level="Info" culprit="diff_in">"Generating: diff_in_altera_gpio_180_bency7y"</message>
+   <message level="Info" culprit="diff_in">"Generating: altera_gpio"</message>
+  </messages>
+ </entity>
+ <entity kind="altera_gpio_core20" version="18.0" name="altera_gpio">
+  <parameter name="BUS_HOLD" value="false" />
+  <parameter name="EXT_DRIVER_PARAM" value="false" />
+  <parameter name="ENABLE_TERM" value="false" />
+  <parameter name="PIN_TYPE" value="input" />
+  <parameter name="gui_use_oe_off_shadow" value="false" />
+  <parameter name="gui_io_reg_mode" value="none" />
+  <parameter name="OPEN_DRAIN" value="false" />
+  <parameter name="device_family" value="Cyclone 10 GX" />
+  <parameter name="PIN_TYPE_GUI" value="Input" />
+  <parameter name="gui_diff_buff" value="true" />
+  <parameter name="gui_bus_hold_shadow" value="false" />
+  <parameter name="gui_separate_io_clks" value="false" />
+  <parameter name="gui_separate_io_clks_off_shadow" value="false" />
+  <parameter name="gui_enable_termination_ports_shadow" value="false" />
+  <parameter name="gui_pseudo_diff_on_shadow" value="true" />
+  <parameter name="SEPARATE_I_O_CLOCKS" value="false" />
+  <parameter name="gui_pseudo_diff_off_shadow" value="false" />
+  <parameter name="gui_enable_termination_ports" value="false" />
+  <parameter name="gui_areset_mode_off_shadow" value="None" />
+  <parameter name="gui_enable_cke_off_shadow" value="false" />
+  <parameter name="REGISTER_MODE" value="none" />
+  <parameter name="gui_use_oe" value="false" />
+  <parameter name="gui_sreset_mode" value="None" />
+  <parameter name="gui_enable_migratable_port_names" value="false" />
+  <parameter name="gui_sreset_mode_off_shadow" value="None" />
+  <parameter name="ENABLE_OE" value="false" />
+  <parameter name="GENERATE_SDC_FILE" value="false" />
+  <parameter name="gui_pseudo_diff" value="true" />
+  <parameter name="SRESET_MODE" value="none" />
+  <parameter name="IP_MIGRATE_PORT_MAP_FILE" value="altddio_bidir_port_map.csv" />
+  <parameter name="SIZE" value="1" />
+  <parameter name="BUFFER_TYPE" value="differential" />
+  <parameter name="PSEUDO_DIFF" value="false" />
+  <parameter name="gui_use_oe_on_shadow" value="true" />
+  <parameter name="gui_open_drain_shadow" value="false" />
+  <parameter name="gui_hr_logic" value="false" />
+  <parameter name="SYS_INFO_DEVICE" value="10CX105YF672E6G" />
+  <parameter name="gui_enable_cke" value="false" />
+  <parameter name="ENABLE_CKE" value="false" />
+  <parameter name="HALF_RATE" value="false" />
+  <parameter name="gui_areset_mode" value="None" />
+  <parameter name="gui_bus_hold" value="false" />
+  <parameter name="ARESET_MODE" value="none" />
+  <parameter name="gui_open_drain" value="false" />
+  <generatedFiles>
+   <file
+       path="/home/const/dev/c10gx/diff_in/altera_gpio_core20_180/synth/altera_gpio.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/const/dev/c10gx/diff_in/altera_gpio_core20_180/synth/altera_gpio.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/const/intelFPGA_pro/18.0/ip/altera/altera_gpio/altera_gpio_core20/altera_gpio_core_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="diff_in_altera_gpio_180_bency7y" as="core" />
+  <messages>
+   <message level="Info" culprit="diff_in">"Generating: altera_gpio"</message>
+  </messages>
+ </entity>
+</deploy>

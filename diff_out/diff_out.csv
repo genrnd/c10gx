@@ -1,0 +1,20 @@
+# system info diff_out on 2018.05.08.06:40:25
+system_info:
+name,value
+DEVICE,10CX105YF672E6G
+DEVICE_FAMILY,Cyclone 10 GX
+GENERATION_ID,0
+#
+#
+# Files generated for diff_out on 2018.05.08.06:40:25
+files:
+filepath,kind,attributes,module,is_top
+sim/diff_out.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,diff_out,true
+altera_gpio_180/sim/diff_out_altera_gpio_180_ux4bazq.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,diff_out_altera_gpio_180_ux4bazq,false
+altera_gpio_core20_180/sim/altera_gpio.sv,SYSTEM_VERILOG,,altera_gpio,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+diff_out.gpio_0,diff_out_altera_gpio_180_ux4bazq
+diff_out.gpio_0.core,altera_gpio
