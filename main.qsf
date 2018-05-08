@@ -25,15 +25,15 @@ set_global_assignment -name SYSTEMVERILOG_FILE main.sv
 
 ############## PIN ASSIGNMENTS ##################
 
-set_location_assignment PIN_AD23 -to sfpp_1_rd_n
-set_location_assignment PIN_AD24 -to sfpp_1_rd_p
-set_location_assignment PIN_AE25 -to sfpp_1_td_n
-set_location_assignment PIN_AE26 -to sfpp_1_td_p
+set_location_assignment PIN_AD23 -to sfp1_rd_n
+set_location_assignment PIN_AD24 -to sfp1_rd_p
+set_location_assignment PIN_AE25 -to sfp1_td_n
+set_location_assignment PIN_AE26 -to sfp1_td_p
 
-set_location_assignment PIN_P23 -to sfpp_2_rd_n
-set_location_assignment PIN_P24 -to sfpp_2_rd_p
-set_location_assignment PIN_R25 -to sfpp_2_td_n
-set_location_assignment PIN_R26 -to sfpp_2_td_p
+set_location_assignment PIN_P23 -to sfp2_rd_n
+set_location_assignment PIN_P24 -to sfp2_rd_p
+set_location_assignment PIN_R25 -to sfp2_td_n
+set_location_assignment PIN_R26 -to sfp2_td_p
 
 set_location_assignment PIN_U21 -to refclkr_sfp1_n
 set_location_assignment PIN_U22 -to refclkr_sfp1_p
@@ -287,8 +287,7 @@ set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led5 -entity main
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led6 -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp1_c2m_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp1_m2c_n -entity main
-set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp1_m2c_p -entity main
-set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp2_c2m_p -entity main
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp2_c2m_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp2_m2c_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp3_c2m_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp3_m2c_n -entity main
@@ -300,10 +299,10 @@ set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_hb_p[0] -entity main
 set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_hb_p[1] -entity main
 set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_la_p[0] -entity main
 set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_la_p[1] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfpp_1_rd_p -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfpp_1_td_n -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfpp_2_rd_p -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to sfpp_2_td_n -entity main
+set_instance_assignment -name IO_STANDARD "LVDS" -to sfp1_rd_p -entity main
+set_instance_assignment -name IO_STANDARD "LVDS" -to sfp1_td_n -entity main
+set_instance_assignment -name IO_STANDARD "LVDS" -to sfp2_rd_p -entity main
+set_instance_assignment -name IO_STANDARD "LVDS" -to sfp2_td_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk0_m2c_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk0_m2c_p -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk_in_n -entity main
