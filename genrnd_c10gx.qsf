@@ -14,12 +14,10 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 
 
 
-
 ############## PROJECT FILES ##################
 
 set_global_assignment -name SDC_FILE main.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE main.sv
-
 
 
 
@@ -29,24 +27,20 @@ set_location_assignment PIN_AD23 -to sfp1_rd_n
 set_location_assignment PIN_AD24 -to sfp1_rd_p
 set_location_assignment PIN_AE25 -to sfp1_td_n
 set_location_assignment PIN_AE26 -to sfp1_td_p
-
 set_location_assignment PIN_P23 -to sfp2_rd_n
 set_location_assignment PIN_P24 -to sfp2_rd_p
 set_location_assignment PIN_R25 -to sfp2_td_n
 set_location_assignment PIN_R26 -to sfp2_td_p
-
 set_location_assignment PIN_U21 -to refclkr_sfp1_n
 set_location_assignment PIN_U22 -to refclkr_sfp1_p
 set_location_assignment PIN_R21 -to refclkr_sfp2_n
 set_location_assignment PIN_R22 -to refclkr_sfp2_p
-
 set_location_assignment PIN_K23 -to dp2_m2c_n
 set_location_assignment PIN_K24 -to dp2_m2c_p
 set_location_assignment PIN_H23 -to dp3_m2c_n
 set_location_assignment PIN_H24 -to dp3_m2c_p
 set_location_assignment PIN_F23 -to dp4_m2c_n
 set_location_assignment PIN_F24 -to dp4_m2c_p
-
 set_location_assignment PIN_N25 -to dp1_c2m_n
 set_location_assignment PIN_N26 -to dp1_c2m_p
 set_location_assignment PIN_L25 -to dp2_c2m_n
@@ -55,86 +49,80 @@ set_location_assignment PIN_J25 -to dp3_c2m_n
 set_location_assignment PIN_J26 -to dp3_c2m_p
 set_location_assignment PIN_G25 -to dp4_c2m_n
 set_location_assignment PIN_G26 -to dp4_c2m_p
-
 set_location_assignment PIN_N21 -to refclkr_gxd_n
 set_location_assignment PIN_N22 -to refclkr_gxd_p
 set_location_assignment PIN_L21 -to gbtclk0r_m2c_n
 set_location_assignment PIN_L22 -to gbtclk0r_m2c_p
 
-set_location_assignment PIN_AD7 -to sfp1_rs0
-set_location_assignment PIN_AE6 -to sfp1_scl
-set_location_assignment PIN_AF8 -to sfp1_tx_dis
-set_location_assignment PIN_AF7 -to sfp1_sda
+set_location_assignment PIN_AE5 -to data0
+set_location_assignment PIN_AF7 -to sfp1_tx_dis
+set_location_assignment PIN_AC8 -to sfp1_rs0
 set_location_assignment PIN_AD8 -to sfp1_rs1
 set_location_assignment PIN_AC10 -to sfp1_mod_abs
-set_location_assignment PIN_AB5 -to sfp1_txflt
-set_location_assignment PIN_AC5 -to sfp1_rxlos
-
-set_location_assignment PIN_AA11 -to sfp2_rs0
-set_location_assignment PIN_AD10 -to sfp2_scl
-set_location_assignment PIN_Y10 -to sfp2_tx_dis
-set_location_assignment PIN_AD12 -to sfp2_sda
+set_location_assignment PIN_AD10 -to sfp1_scl
+set_location_assignment PIN_AB6 -to sfp1_sda
+set_location_assignment PIN_AB5 -to sfp1_rxlos
+set_location_assignment PIN_AC7 -to sfp1_txflt
+set_location_assignment PIN_AC5 -to sfp2_tx_dis
+set_location_assignment PIN_AD5 -to sfp2_rs0
 set_location_assignment PIN_Y14 -to sfp2_rs1
-set_location_assignment PIN_AB14 -to sfp2_mod_abs
-set_location_assignment PIN_AB13 -to sfp2_txflt
-set_location_assignment PIN_AD13 -to sfp2_rxlos
-
-set_location_assignment PIN_AE5 -to data0
-set_location_assignment PIN_AA14 -to fmc_nc_trigger
-set_location_assignment PIN_Y15 -to fmc_mosi
+set_location_assignment PIN_AA14 -to sfp2_mod_abs
+set_location_assignment PIN_AD13 -to sfp2_scl
+set_location_assignment PIN_AD12 -to sfp2_sda
+set_location_assignment PIN_W15 -to sfp2_rxlos
+set_location_assignment PIN_Y15 -to sfp2_txflt
+set_location_assignment PIN_AA13 -to i2c_fpga_scl
+set_location_assignment PIN_AA12 -to i2c_fpga_sda
 set_location_assignment PIN_AC13 -to clkusr_100m
 
 set_location_assignment PIN_W18 -to fmc_smbus_clk
-set_location_assignment PIN_W19 -to fmc_en_5v0
-set_location_assignment PIN_Y21 -to i2c_fpga_sda
-set_location_assignment PIN_AA21 -to i2c_fpga_scl
-set_location_assignment PIN_Y19 -to fmc_ha22
-set_location_assignment PIN_Y20 -to fmc_en_vdd33
-set_location_assignment PIN_W17 -to fmc_en_other_pwr
+set_location_assignment PIN_W19 -to fmc_trigger
+set_location_assignment PIN_Y21 -to fmc_en_1v8
+set_location_assignment PIN_AA21 -to fmc_muxmode1
+set_location_assignment PIN_Y19 -to fmc_adc_mode
+set_location_assignment PIN_Y20 -to fmc_en_5v0
+set_location_assignment PIN_W17 -to fmc_ha22
 set_location_assignment PIN_Y17 -to fmc_fpga_ha17
-set_location_assignment PIN_AC20 -to fmc_en_1v8
-set_location_assignment PIN_AC21 -to fmc_muxmodel
-set_location_assignment PIN_AA18 -to fmc_sclk
-set_location_assignment PIN_AB18 -to fmc_trigger
-set_location_assignment PIN_AD17 -to fmc_miso
-set_location_assignment PIN_AE17 -to fmc_nss
-set_location_assignment PIN_AF13 -to fmc_smbus_dat
-set_location_assignment PIN_AF14 -to fmc_nreset
-
-set_location_assignment PIN_AC18 -to fmc_clk0_m2c_n
-set_location_assignment PIN_AD18 -to fmc_clk0_m2c_p
+set_location_assignment PIN_AC20 -to fmc_sda
+set_location_assignment PIN_AC21 -to fmc_scl
+set_location_assignment PIN_AA18 -to fmc_nreset
+set_location_assignment PIN_AB18 -to fmc_mosi
+set_location_assignment PIN_AD20 -to fmc_cam_res_s
+set_location_assignment PIN_AD17 -to fmc_nss
+set_location_assignment PIN_AE17 -to fmc_sclk
+set_location_assignment PIN_AF13 -to fmc_pg
+set_location_assignment PIN_AF14 -to fmc_fpga_ha13
+set_location_assignment PIN_AD18 -to vclk1_out_s
 set_location_assignment PIN_AE19 -to refclk_100m_n
 set_location_assignment PIN_AF19 -to refclk_100m_p
-set_location_assignment PIN_AB19 -to fmc_clk_in_n
-set_location_assignment PIN_AA19 -to fmc_clk_in_p
-set_location_assignment PIN_AF18 -to fmc_adc_mode
+set_location_assignment PIN_AB19 -to fmc_en_vdd33
+set_location_assignment PIN_AF17 -to fmc_smbus_dat
+set_location_assignment PIN_AF18 -to fmc_en_other_pwr
 
-set_location_assignment PIN_A19 -to fmc_en_sw
-set_location_assignment PIN_D13 -to fmc_i2c_scl2
-set_location_assignment PIN_D12 -to fmc_i2c_sda2
-set_location_assignment PIN_C13 -to fmc_pg
-
-set_location_assignment PIN_C18 -to clk0_out_n
-set_location_assignment PIN_B18 -to clk0_out_p
-set_location_assignment PIN_C16 -to cam_clkout_n
-set_location_assignment PIN_C17 -to cam_clkout_p
-
-set_location_assignment PIN_M1 -to fmc_monitor2
-set_location_assignment PIN_L1 -to fmc_prsnt
-set_location_assignment PIN_R2 -to fmc_enable_vddca
-set_location_assignment PIN_R1 -to fmc_muxmode0
-
+set_location_assignment PIN_K2 -to fmc_i2c_mux_sda
+set_location_assignment PIN_J2 -to fmc_i2c_mux_scl
+set_location_assignment PIN_M1 -to fmc_enable_vddca
+set_location_assignment PIN_L1 -to fmc_nc_trigger
+set_location_assignment PIN_R2 -to muxmode_0
+set_location_assignment PIN_R1 -to muxmode_1
 set_location_assignment PIN_M3 -to fmc_hdmio_clk
 set_location_assignment PIN_L3 -to fmc_hdmii_llc
 set_location_assignment PIN_P5 -to fmc_sync_n
 set_location_assignment PIN_R5 -to fmc_sync_p
 
-set_location_assignment PIN_C1 -to led4
-set_location_assignment PIN_B1 -to led3
-set_location_assignment PIN_A3 -to led2
-set_location_assignment PIN_A2 -to led1
-set_location_assignment PIN_E2 -to led6
-set_location_assignment PIN_E1 -to led5
+set_location_assignment PIN_B19 -to fmc_en_sw
+set_location_assignment PIN_D13 -to fmc_i2c_scl2
+set_location_assignment PIN_D12 -to fmc_i2c_sda2
+set_location_assignment PIN_B14 -to fmc_miso
+set_location_assignment PIN_A14 -to fmc_prsnt
+set_location_assignment PIN_C18 -to clk0_out_n
+set_location_assignment PIN_B18 -to clk0_out_p
+set_location_assignment PIN_C16 -to cam_clkout_n
+set_location_assignment PIN_C17 -to cam_clkout_p
+set_location_assignment PIN_E20 -to led1
+set_location_assignment PIN_D20 -to led2
+set_location_assignment PIN_B16 -to led3
+set_location_assignment PIN_A16 -to led4
 
 set_location_assignment PIN_F17 -to fmc_la01_n
 set_location_assignment PIN_E17 -to fmc_la01_p
@@ -174,12 +162,12 @@ set_location_assignment PIN_P4 -to fmc_la19_n
 set_location_assignment PIN_P3 -to fmc_la19_p
 set_location_assignment PIN_U1 -to fmc_la21_n
 set_location_assignment PIN_V1 -to fmc_la21_p
-set_location_assignment PIN_U5 -to fmc_la23_n
-set_location_assignment PIN_U4 -to fmc_la23_p
+set_location_assignment PIN_G4 -to fmc_la23_n
+set_location_assignment PIN_G5 -to fmc_la23_p
 set_location_assignment PIN_AF12 -to fmc_la26_n
 set_location_assignment PIN_AF11 -to fmc_la26_p
-set_location_assignment PIN_AE10 -to fmc_la27_n
-set_location_assignment PIN_AF9 -to fmc_la27_p
+set_location_assignment PIN_D5 -to fmc_la27_n
+set_location_assignment PIN_D4 -to fmc_la27_p
 set_location_assignment PIN_AB15 -to fmc_la28_n
 set_location_assignment PIN_AC15 -to fmc_la28_p
 set_location_assignment PIN_AD15 -to fmc_la29_n
@@ -228,6 +216,7 @@ set_location_assignment PIN_AC16 -to fmc_hb18_n
 set_location_assignment PIN_AC17 -to fmc_hb18_p
 
 
+
 set_instance_assignment -name IO_STANDARD "1.8 V" -to cam_clkout_n -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to cam_clkout_p -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to clk0_out_n -entity main
@@ -237,7 +226,6 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to data0 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_adc_mode -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_en_1v8 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_en_5v0 -entity main
-set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_en_other_pwr -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_en_sw -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_en_vdd33 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_enable_vddca -entity main
@@ -248,14 +236,17 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_hdmio_clk -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_i2c_scl2 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_i2c_sda2 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_miso -entity main
-set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_monitor2 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_mosi -entity main
-set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_muxmode0 -entity main
-set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_muxmodel -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_i2c_mux_sda -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_i2c_mux_scl -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to muxmode_0 -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to muxmode_1 -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_muxmode1 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_nc_trigger -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_nreset -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_nss -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_pg -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fpga_ha13 -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_prsnt -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_sclk -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_smbus_clk -entity main
@@ -279,12 +270,15 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to sfp2_scl -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to sfp2_sda -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to sfp2_tx_dis -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to sfp2_txflt -entity main
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led1 -entity main
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led2 -entity main
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led3 -entity main
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led4 -entity main
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led5 -entity main
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to led6 -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to led1 -entity main
+set_instance_assignment -name IO_STANDARD "1.5 V" -to led2 -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to led3 -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to led4 -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_cam_res_s -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to vclk1_out_s -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_sda -entity main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to fmc_scl -entity main
+
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp1_c2m_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp1_m2c_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp2_c2m_n -entity main
@@ -293,20 +287,16 @@ set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp3_
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp3_m2c_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp4_c2m_n -entity main
 set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to dp4_m2c_n -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_ha_p[0] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_ha_p[1] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_hb_p[0] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_hb_p[1] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_la_p[0] -entity main
-set_instance_assignment -name IO_STANDARD "LVDS" -to fmc_la_p[1] -entity main
+
 set_instance_assignment -name IO_STANDARD LVDS -to sfp1_rd_p -entity main
-set_instance_assignment -name IO_STANDARD LVDS -to sfp1_td_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to sfp2_rd_p -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to sfp2_td_n -entity main
-set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk0_m2c_n -entity main
-set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk0_m2c_p -entity main
-set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk_in_n -entity main
-set_instance_assignment -name IO_STANDARD LVDS -to fmc_clk_in_p -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to fmc_ha_p[0] -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to fmc_ha_p[1] -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to fmc_hb_p[0] -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to fmc_hb_p[1] -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to fmc_la_p[0] -entity main
+set_instance_assignment -name IO_STANDARD LVDS -to fmc_la_p[1] -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_ha02_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_ha03_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to fmc_ha04_n -entity main
@@ -397,5 +387,10 @@ set_instance_assignment -name IO_STANDARD LVDS -to refclkr_gxd_p -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to refclkr_sfp1_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to refclkr_sfp2_n -entity main
 set_instance_assignment -name IO_STANDARD LVDS -to refclkr_sfp2_p -entity main
+
+
+
+############## ADDED BY QUARTUS ##################
+
 set_global_assignment -name IP_FILE diff_in.ip
 set_global_assignment -name IP_FILE diff_out.ip
