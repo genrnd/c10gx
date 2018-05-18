@@ -1,6 +1,6 @@
 
 // Intel / Altera Cyclone 10 GX board test project
-// General R&D team, 2018
+// General R&D, 2018
 
 module main(
 
@@ -57,64 +57,77 @@ module main(
 			output dp4_c2m_n,
 			output dp4_c2m_p,
 
-			input fmc_clk0_m2c_n,
-			input fmc_clk0_m2c_p,
-			input fmc_clk_in_n,
-			input fmc_clk_in_p,
+	// REFCLK
+			inout refclkr_sfp1_n,
+			inout refclkr_sfp1_p,
+			inout refclkr_sfp2_n,
+			inout refclkr_sfp2_p,
 
-	// Clocks
-			input refclkr_gxd_n,
-			input refclkr_gxd_p,
-			input gbtclk0r_m2c_n,
-			input gbtclk0r_m2c_p,
-			input refclk_100m_n,
-			input refclk_100m_p,
+			inout refclkr_gxd_n,
+			inout refclkr_gxd_p,
+			inout gbtclk0r_m2c_n,
+			inout gbtclk0r_m2c_p,
+
+	// I2C interfaces
+			inout i2c_fpga_scl,
+			inout i2c_fpga_sda,
+
+			inout fmc_sda,
+			inout fmc_scl,
+
+			inout fmc_i2c_mux_sda,
+			inout fmc_i2c_mux_scl,
+
+			inout fmc_i2c_scl2,
+			inout fmc_i2c_sda2,
+
+	// FMC HPC single-ended IO
+			input data0,
 			input clkusr_100m,
-			input clk0_out_n,
-			input clk0_out_p,
-			input cam_clkout_n,
-			input cam_clkout_p,
-
-	// GPIO
-	output led[6:1],
-
-	inout i2c_fpga_sda,
-	inout i2c_fpga_scl,
-
-	inout fmc_i2c_scl2,
-	inout fmc_i2c_sda2,
-
-	input data0,
-
-	// FMC HPC differential IO
-			input fmc_nc_trigger,
-			input fmc_mosi,
 			input fmc_smbus_clk,
-			input fmc_en_5v0,
-			input fmc_ha22,
-			input fmc_en_vdd33,
-			input fmc_en_other_pwr,
-			input fmc_fpga_ha17,
-			input fmc_en_1v8,
-			input fmc_muxmodel,
-			input fmc_sclk,
 			input fmc_trigger,
-			input fmc_miso,
-			input fmc_nss,
-			input fmc_smbus_dat,
-			input fmc_nreset,
+			input fmc_en_1v8,
+			input fmc_en_5v0,
+			input fmc_muxmode1,
 			input fmc_adc_mode,
-			input fmc_en_sw,
+			input fmc_ha22,
+			input fmc_fpga_ha17,
+			input fmc_nreset,
+			input fmc_mosi,
+			input fmc_cam_res_s,
+			input fmc_nss,
+			input fmc_sclk,
 			input fmc_pg,
-			input fmc_monitor2,
-			input fmc_prsnt,
+			input fmc_fpga_ha13,
+			input vclk1_out_s,
+			input fmc_en_vdd33,
+			input fmc_smbus_dat,
+			input fmc_en_other_pwr,
 			input fmc_enable_vddca,
-			input fmc_muxmode0,
+			input fmc_nc_trigger,
+			input muxmode_0,
+			input muxmode_1,
 			input fmc_hdmio_clk,
 			input fmc_hdmii_llc,
+			input fmc_en_sw,
+			input fmc_miso,
+			input fmc_prsnt,
+
+			output [4:1]led,
+
+			input refclk_100m_n,
+			input refclk_100m_p,
+
 			input fmc_sync_n,
 			input fmc_sync_p,
 
+			input clk0_out_n,
+			input clk0_out_p,
+
+			input cam_clkout_n,
+			input cam_clkout_p,
+
+	// FMC HPC differential IO
 			output fmc_la01_n,
 			output fmc_la01_p,
 			output fmc_la02_n,
