@@ -19,4 +19,4 @@ Perform following steps to write your working bitstream (SOF) to EPCQ256L:
 
 ## Links
 
-  1 (https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/an/an370.pdf)[Application Note about using of Serial Flash Loader]
+  1. [Application Note about using of Serial Flash Loader](https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/an/an370.pdf)
