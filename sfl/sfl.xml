@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.07.12.14:38:59"
+ outputDirectory="/home/pk/src/genrnd/fmc10g/c10gx/sfl/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone 10 GX"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10CX150YF672E5G"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="5"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="noe_in" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="noe_in" direction="input" role="noe" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="sfl" version="1.0" name="sfl">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="10CX150YF672E5G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 GX" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="5" />
+  <generatedFiles>
+   <file
+       path="/home/pk/src/genrnd/fmc10g/c10gx/sfl/synth/sfl.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/pk/src/genrnd/fmc10g/c10gx/sfl/synth/sfl.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/home/pk/src/genrnd/fmc10g/c10gx/sfl.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/hdd/opt/altera/q18/ip/altera/altera_serial_flash_loader/altera_serial_flash_loader_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="sfl">"Generating: sfl"</message>
+   <message level="Info" culprit="sfl">"Generating: altera_serial_flash_loader"</message>
+   <message level="Info" culprit="serial_flash_loader_0">generating top-level entity altera_serial_flash_loader</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_serial_flash_loader"
+   version="18.0"
+   name="altera_serial_flash_loader">
+  <parameter name="ENABLE_SHARED_ACCESS" value="OFF" />
+  <parameter name="ENABLE_QUAD_SPI_SUPPORT" value="true" />
+  <parameter name="ENHANCED_MODE" value="true" />
+  <parameter name="gui_shared_access" value="false" />
+  <parameter name="NCSO_WIDTH" value="3" />
+  <parameter name="INTENDED_DEVICE_FAMILY" value="Cyclone 10 GX" />
+  <generatedFiles>
+   <file
+       path="/home/pk/src/genrnd/fmc10g/c10gx/sfl/altera_serial_flash_loader_180/synth/altera_serial_flash_loader.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/pk/src/genrnd/fmc10g/c10gx/sfl/altera_serial_flash_loader_180/synth/altera_serial_flash_loader.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/hdd/opt/altera/q18/ip/altera/altera_serial_flash_loader/altera_serial_flash_loader_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="sfl" as="serial_flash_loader_0" />
+  <messages>
+   <message level="Info" culprit="sfl">"Generating: altera_serial_flash_loader"</message>
+   <message level="Info" culprit="serial_flash_loader_0">generating top-level entity altera_serial_flash_loader</message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<node xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altera="http://www.altera.com/XMLSchema/Qsys/SystemTree">
+  <instanceKey xsi:type="xs:string">sfl</instanceKey>
+  <instanceData xsi:type="data">
+    <parameters></parameters>
+    <interconnectAssignments>
+      <interconnectAssignment>
+        <name>$system.qsys_mm.clockCrossingAdapter</name>
+        <value>HANDSHAKE</value>
+      </interconnectAssignment>
+      <interconnectAssignment>
+        <name>$system.qsys_mm.maxAdditionalLatency</name>
+        <value>0</value>
+      </interconnectAssignment>
+    </interconnectAssignments>
+    <className>sfl</className>
+    <version>1.0</version>
+    <name>sfl</name>
+    <uniqueName>sfl</uniqueName>
+    <nonce>0</nonce>
+    <incidentConnections></incidentConnections>
+  </instanceData>
+  <children>
+    <node>
+      <instanceKey xsi:type="xs:string">serial_flash_loader_0</instanceKey>
+      <instanceData xsi:type="data">
+        <parameters>
+          <parameter>
+            <name>ENABLE_QUAD_SPI_SUPPORT</name>
+            <value>true</value>
+          </parameter>
+          <parameter>
+            <name>ENABLE_SHARED_ACCESS</name>
+            <value>OFF</value>
+          </parameter>
+          <parameter>
+            <name>ENHANCED_MODE</name>
+            <value>true</value>
+          </parameter>
+          <parameter>
+            <name>INTENDED_DEVICE_FAMILY</name>
+            <value>Cyclone 10 GX</value>
+          </parameter>
+          <parameter>
+            <name>NCSO_WIDTH</name>
+            <value>3</value>
+          </parameter>
+          <parameter>
+            <name>gui_shared_access</name>
+            <value>false</value>
+          </parameter>
+        </parameters>
+        <interconnectAssignments></interconnectAssignments>
+        <className>altera_serial_flash_loader</className>
+        <version>18.0</version>
+        <name>serial_flash_loader_0</name>
+        <uniqueName>altera_serial_flash_loader</uniqueName>
+        <fixedName>altera_serial_flash_loader</fixedName>
+        <nonce>0</nonce>
+        <incidentConnections></incidentConnections>
+        <path>sfl.serial_flash_loader_0</path>
+      </instanceData>
+      <children></children>
+    </node>
+  </children>
+</node>

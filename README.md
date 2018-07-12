@@ -1,50 +1,22 @@
+# c10gx: Serial Flash Loader
 
-# c10gx
+This small project is intended for writing of working firmware to configuration
+flash EPCQ256L, which is connected to the Cyclone 10GX chip.
 
-## Schematics and test RTL project for Intel Cyclone 10 GX Development Kit
+## How to use
 
-Kit is intended for evaluation of new Intel’s FPGA family Cyclone 10 GX.
+Perform following steps to write your working bitstream (SOF) to EPCQ256L:
 
-It has FMC connector with many LVDS channels and 2x SFP/SFP+ connectors for 1G/10G Ethernet. FMC connector allows to connect different modules (video, ADC, DAC, etc…). SFP/SFP+ ports support also Direct Attach cables, not only SFP/SFP+ modules.
+  1. create .jic file, see [1], ch.1.5.1. At this step you should specify
+    working firmware which should be loaded from EPCQ256L
+  2. build this firmware in Quartus Prime
+  3. connect JTAG to the board
+  4. program this (sfl) firmware to FPGA. Leds 3-8 should start blinking. 
+  5. open .jic file with Quartus Prime Programmer and check
+     'Program/Configure'. Start programming. Be patient, it takes time :)
+  6. power off the board, disconnect JTAG and power on again. FPGA should run
+     with working bitstream specified in 1st step
 
-Project page, board images and contacts - <https://genrnd.com/projects/07e10005/>
+## Links
 
-### Applications
-* Cyclone 10GX family features evaluation
-* 1G/10G Ethernet traffic processing
-* Real-time processing of video signal
-* Real-time DSP processing of analogue signals from one or more ADCs.
-* Capturing of information from ADC through 1G/10G Ethernet
-
-### Specifications
-
-#### FMC-interface
-* FMC connector for LVDS interfaces: fully compatible with LPC (Low Pin Count) according to VITA57
-* Number of LVDS interfaces: 58x LVDS (HPC) + 20 single
-* LVDS speed: up to 1.434 Gbps
-
-#### Ethernet
-* 2xSFP/SFP+ for 1G/10G Ethernet connection
-* Direct Attach support
-* Built-in 1G/10G PHY in FPGA chip. PHY power consumption on 10G speed – 168 mW
-
-#### Other interfaces
-* JTAG (10-pin) for FPGA debugging
-* USB for firmware update
-* Firmware update controller: STM32 MCU
-
-#### FPGA
-* 10CX150YF672E6G
-* Migration chips: 10CX105YF672E6G, 10CX220YF672E6G
-* Configuration flash: QSPI 256 Mbit
-* Firmware update: JTAG, USB
-* Clock sources: 156.25 МГц, 100 МHz
-
-#### Power
-* External AC/DC apaters 12 V
-* Estimate consumption: less than 8 W
-
-#### Dimensions, Weight
-* Length: 130 mm (5.1”)
-* Width: 100 mm (4”)
-* Weight: ~100 g.
+  1 (https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/an/an370.pdf)[Application Note about using of Serial Flash Loader]
