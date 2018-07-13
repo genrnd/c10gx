@@ -17,11 +17,25 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 ############## PROJECT FILES ##################
 
 set_global_assignment -name SYSTEMVERILOG_FILE main.sv
-set_global_assignment -name QIP_FILE sfl/sfl.qip
+set_global_assignment -name SDC_FILE c10gx.sdc
 
 ############## PIN ASSIGNMENTS ##################
 
-set_location_assignment PIN_AC13 -to clkusr_100m
+## Clocks
+
+### 100 MHz, single-ended
+set_location_assignment PIN_AC13 -to clk100
+set_instance_assignment -name IO_STANDARD "1.8 V" -to clk100 -entity main
+
+### 156.25 MHz, differential
+set_location_assignment PIN_U22 -to clk156p
+set_instance_assignment -name IO_STANDARD LVDS -to clk156p -entity main
+set_instance_assignment -name XCVR_REFCLK_PIN_TERMINATION AC_COUPLING -to clk156p -entity main
+set_instance_assignment -name OUTPUT_TERMINATION OCT_100_OHMS -to clk156p -entity main
+set_instance_assignment -name OUTPUT_TERMINATION OCT_100_OHMS -to "clk156p(n)" -entity main
+
+## LEDs
+
 set_location_assignment PIN_A2 -to led[3]
 set_location_assignment PIN_A3 -to led[4]
 set_location_assignment PIN_A4 -to led[5]
@@ -29,7 +43,6 @@ set_location_assignment PIN_A6 -to led[6]
 set_location_assignment PIN_A8 -to led[7]
 set_location_assignment PIN_A9 -to led[8]
 
-set_instance_assignment -name IO_STANDARD "1.8 V" -to clkusr_100m -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to led[3] -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to led[4] -entity main
 set_instance_assignment -name IO_STANDARD "1.8 V" -to led[5] -entity main
@@ -39,10 +52,8 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to led[8] -entity main
 
 set_global_assignment -name AUTO_RESERVE_CLKUSR_FOR_CALIBRATION OFF
 
-
 ############## ADDED BY QUARTUS ##################
 
-set_global_assignment -name IP_FILE sfl.ip
 set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
 set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
@@ -50,3 +61,5 @@ set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name GENERATE_PR_RBF_FILE OFF
 set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
 set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_instance_assignment -name PARTITION_COLOUR 4288537343 -to main -entity main
+set_instance_assignment -name PARTITION_COLOUR 4291690369 -to auto_fab_0 -entity main

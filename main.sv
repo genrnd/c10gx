@@ -2,24 +2,39 @@
 // Intel / Altera Cyclone 10 GX board test project
 // General R&D, 2018
 
-module main(
+`define LED_100MHZ 3
+`define LED_156MHZ 4
 
-      input clkusr_100m,  // 100 MHz, single-ended
-      output [8:3]led
+`define CLK_100MHZ 32'd100000000
+`define CLK_156MHZ 32'd156250000
+
+module main(
+  input clk100,    // 100 MHz, single-ended
+  input clk156p,   // 156.25 MHz, diff pair 
+  output reg [8:3]led
 );
 
-/* Blink leds
+/* Blink leds from 100Mhz and 156Mhz references
  */
 logic [31:0] clk100_cntr;
-always_ff @(posedge clkusr_100m)
+logic [31:0] clk156_cntr;
+
+always_ff @(posedge clk100) begin
   clk100_cntr <= clk100_cntr + 1'b1;
+  if ( clk100_cntr == (`CLK_100MHZ/2 - 1) ) begin
+    led[`LED_100MHZ] <= ~led[`LED_100MHZ];
+    clk100_cntr <= 32'd0;
+  end
+end
 
-assign led[8:3] = clk100_cntr[29:24];
+always_ff @(posedge clk156p) begin
+  clk156_cntr <= clk156_cntr + 1'b1;
+  if ( clk156_cntr == (`CLK_156MHZ/2 - 1) ) begin
+    led[`LED_156MHZ] <= ~led[`LED_156MHZ];
+    clk156_cntr <= 32'd0;
+  end
+end
 
-/* Serial Flash Loader instance
- */
-sfl u0 (
-  .noe_in ( 1'b0 ) // 0 = enabled
-);
+assign led[8:`LED_156MHZ+1] = '0;
 
 endmodule
