@@ -24,4 +24,4 @@ Clock 156.25 MHz is divided by 156.250.000 and blinks led #3.
 
 ## Links
 
-  1. TODO: link to serial flash loader firmware 
+  1. https://github.com/genrnd/c10gx/tree/sfl: Serial Flash Loader firmware 
