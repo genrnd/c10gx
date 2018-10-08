@@ -1,6 +1,8 @@
 
 # c10gx
 
+![](./img/07e10005-01.jpg)
+
 ## Schematics and test RTL project for Intel Cyclone 10 GX Development Kit
 
 Kit is intended for evaluation of new Intel’s FPGA family Cyclone 10 GX.
